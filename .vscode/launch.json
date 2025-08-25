@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend (FastAPI)",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "backend.main:app",
+        "--reload",
+        "--port",
+        "8000"
+      ],
+      "jinja": true
+    },
+    {
+      "name": "Frontend (React)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "cwd": "${workspaceFolder}/frontend",
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run Both (Backend + Frontend)",
+      "configurations": ["Backend (FastAPI)", "Frontend (React)"]
+    }
+  ]
+}

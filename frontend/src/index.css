@@ -1,0 +1,20 @@
+/* 
+  This file sets up Tailwind CSS.
+  We don’t write normal CSS here — instead,
+  we import Tailwind’s layers and then use its utility classes
+  directly in our React components.
+*/
+
+/* 1. Base styles 
+   These are Tailwind’s CSS resets + base typography rules. */
+@tailwind base;
+
+/* 2. Component styles 
+   This is where custom component classes (like buttons) go. 
+   We can extend them later using @layer components. */
+@tailwind components;
+
+/* 3. Utility classes 
+   This includes the main Tailwind utility system 
+   (like flex, bg-blue-500, text-lg, etc.). */
+@tailwind utilities;
